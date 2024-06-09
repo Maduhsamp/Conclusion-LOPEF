@@ -9,15 +9,21 @@ O LOPEF foi criado com o objetivo de fornecer uma ferramenta eficiente para enge
 Funcionalidades Principais
 
 -Entrada de Dados do Usuário: Recebe valores numéricos fornecidos pelos usuários para realizar os cálculos necessários.
+
 -Cálculo da Densidade Ótima de Estradas: Utiliza algoritmos avançados para determinar a densidade de estradas que equilibra custo e acessibilidade.
+
 -Relatórios Detalhados em PDF: Gera relatórios em PDF que contêm:
+
 --Uma tabela com todos os dados de entrada fornecidos pelo usuário.
+
 --Uma tabela com os resultados dos cálculos realizados pelo sistema.
 
 Tecnologias Utilizadas
 
 O LOPEF foi desenvolvido utilizando as seguintes tecnologias:
+
 -Frontend: Angular (TypeScript) - Um framework robusto e flexível para a construção de aplicações web.
+
 -Backend: Firebase - Plataforma que fornece serviços de hospedagem e integração de dados, facilitando a escalabilidade e manutenção do sistema.
 
 Acesso ao Web App
