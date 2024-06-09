@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 28px);
+}
+
+.sendButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: bold;
+    color: #fff;
+    background-color: #2dd55b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.sendButton:hover {
+    background-color: #27b64d;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formContact{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-block-end: 1vh;
+}
+
+.form-group input, textarea {
+    width: 100%;
+    padding-block: 10px;
+    padding-inline-start: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    resize: none;
+}
+
+label{
+  font-size: clamp(10px, 2vw, 16px);
+}
+
+p {
+  color: red;
+  font-size: clamp(10px, 2vw, 12px);
+}
+
+@media screen and (max-width: 1000px) {
+
+  .container{
+    margin-left: 80px;
+  }
+
+}

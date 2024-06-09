@@ -1,0 +1,175 @@
+<div class="container">
+    <header>
+      <h1>Editar Relatório</h1>
+    </header>
+    <section id="reports-section">
+        <section class="forms">
+            <div class="allForm fadeIn">
+                <form class="formItens" (ngSubmit)="editItem()" [formGroup]="editar" #formDir="ngForm">
+                    <div class="formTop">
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="titulo">Título do Relatório:</label>
+                                <input type="text" id="titulo" placeholder="Insira o título do relatório" formControlName="titulo" maxlength="120" required/>
+                                <p *ngIf="isInvalidControl('titulo')">Erro no título</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="condicoesRelevo">Condições de Relevo:</label>
+                                <input type="text" id="condicoesRelevo" placeholder="Condições de relevo" formControlName="condicoesRelevo" required/>
+                                <p *ngIf="isInvalidControl('condicoesRelevo')">Erro nas condições de relevo</p>
+                            </div>
+                            <div class="input">
+                                <label for="taxaDepreciacao">Taxa de Depreciação (%):</label>
+                                <input type="number" id="taxaDepreciacao" placeholder="Taxa de Depreciação (%)" formControlName="taxaDepreciacao" required/>
+                                <p *ngIf="isInvalidControl('taxaDepreciacao')">Erro na taxa de depreciação</p>
+                              </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="incrementoMedioAnual">Incremento Médio Anual (m3/ha/ano):</label>
+                                <input type="number" id="incrementoMedioAnual" placeholder="Incremento Médio Anual (m3/ha/ano)" formControlName="incrementoMedioAnual" required/>
+                                <p *ngIf="isInvalidControl('incrementoMedioAnual')">Erro no incremento médio anual</p>
+                            </div>
+                            <div class="input">
+                                <label for="idadeCorte">Idade de Corte (anos):</label>
+                                <input type="number" id="idadeCorte" placeholder="Idade de Corte (anos)" formControlName="idadeCorte" required/>
+                                <p *ngIf="isInvalidControl('idadeCorte')">Erro na idade de corte</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="areaTotalEfetivoPlantio">Área Total de Efetivo Plantio (ha):</label>
+                                <input type="number" id="areaTotalEfetivoPlantio" placeholder="Área total de efetivo plantio (ha)" formControlName="areaTotalEfetivoPlantio" required/>
+                                <p *ngIf="isInvalidControl('areaTotalEfetivoPlantio')">Erro na área total de efetivo plantio</p>
+                            </div>
+                        
+                            <div class="input">
+                                <label for="areaTalhoes">Área dos Talhões (ha):</label>
+                                <input type="number" id="areaTalhoes" placeholder="Área dos talhões (ha)" formControlName="areaTalhoes" required/>
+                                <p *ngIf="isInvalidControl('areaTalhoes')">Erro na área dos talhões</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="volumeMadeiraTalhoes">Volume de Madeira dos Talhões (m³/talhão):</label>
+                                <input type="number" id="volumeMadeiraTalhoes" placeholder="Volume de madeira dos talhões (m³/talhão)" formControlName="volumeMadeiraTalhoes" required/>
+                                <p *ngIf="isInvalidControl('volumeMadeiraTalhoes')">Erro no volume de madeira dos talhões</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="lucroMedioMadeiraPe">Lucro Médio (R$/m³):</label>
+                                <input type="number" id="lucroMedioMadeiraPe" placeholder="Lucro médio (R$/m³)" formControlName="lucroMedioMadeiraPe" required/>
+                                <p *ngIf="isInvalidControl('lucroMedioMadeiraPe')">Erro no lucro médio</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="precoTerraUtil">Preço da Terra Útil (R$/ha):</label>
+                                <input type="number" id="precoTerraUtil" placeholder="Preço da terra útil (R$/ha)" formControlName="precoTerraUtil" required/>
+                                <p *ngIf="isInvalidControl('precoTerraUtil')">Erro no preço da terra útil</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="taxaJuros">Taxa de Juros (% a.a.):</label>
+                                <input type="number" id="taxaJuros" placeholder="Taxa de juros (% a.a.)" formControlName="taxaJuros" required/>
+                                <p *ngIf="isInvalidControl('taxaJuros')">Erro na taxa de juros</p>
+                            </div>
+                        </div>                        
+
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="tipoSistemaColheita">Tipo de Sistema de Colheita:</label>
+                                <input type="text" id="tipoSistemaColheita" placeholder="Tipo de sistema de colheita" formControlName="tipoSistemaColheita" required/>
+                                <p *ngIf="isInvalidControl('tipoSistemaColheita')">Erro no tipo de sistema de colheita</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="tipoMaquinaEquipamento">Tipo de Máquina e Equipamento:</label>
+                                <input type="text" id="tipoMaquinaEquipamento" placeholder="Tipo de máquina e equipamento" formControlName="tipoMaquinaEquipamento" required/>
+                                <p *ngIf="isInvalidControl('tipoMaquinaEquipamento')">Erro no tipo de máquina e equipamento</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="equacaoProdutividade">Equação de Produtividade:</label>
+                                <input type="text" id="equacaoProdutividade" placeholder="Equação de produtividade" formControlName="equacaoProdutividade" required/>
+                                <p *ngIf="isInvalidControl('equacaoProdutividade')">Erro na equação de produtividade</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="metaEficienciaOperacional">Meta de Eficiência Operacional (%):</label>
+                                <input type="number" id="metaEficienciaOperacional" placeholder="Meta de eficiência operacional (%)" formControlName="metaEficienciaOperacional" required/>
+                                <p *ngIf="isInvalidControl('metaEficienciaOperacional')">Erro na meta de eficiência operacional</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="custoOperacionalHorario">Custo Operacional Horário (R$/h):</label>
+                                <input type="number" id="custoOperacionalHorario" placeholder="Custo operacional horário (R$/h)" formControlName="custoOperacionalHorario" required/>
+                                <p *ngIf="isInvalidControl('custoOperacionalHorario')">Erro no custo operacional horário</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="distanciaMediaBaldeio">Distância Média de Baldeio (m):</label>
+                                <input type="number" id="distanciaMediaBaldeio" placeholder="Distância média de baldeio (m)" formControlName="distanciaMediaBaldeio" required/>
+                                <p *ngIf="isInvalidControl('distanciaMediaBaldeio')">Erro na distância média de baldeio</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="programacaoTrabalho">Programação de Trabalho:</label>
+                                <input type="text" id="programacaoTrabalho" placeholder="Programação de trabalho" formControlName="programacaoTrabalho" required/>
+                                <p *ngIf="isInvalidControl('programacaoTrabalho')">Erro na programação de trabalho</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="metaProducaoModulo">Meta de Produção do Módulo (m³/mês):</label>
+                                <input type="number" id="metaProducaoModulo" placeholder="Meta de produção do módulo (m³/mês)" formControlName="metaProducaoModulo" required/>
+                                <p *ngIf="isInvalidControl('metaProducaoModulo')">Erro na meta de produção do módulo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="extensaoEstradas">Extensão das Estradas (m):</label>
+                                <input type="number" id="extensaoEstradas" placeholder="Extensão das estradas (m)" formControlName="extensaoEstradas" required/>
+                                <p *ngIf="isInvalidControl('extensaoEstradas')">Erro na extensão das estradas</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="larguraMediaEstradas">Largura Média das Estradas (m):</label>
+                                <input type="number" id="larguraMediaEstradas" placeholder="Largura média das estradas (m)" formControlName="larguraMediaEstradas" required/>
+                                <p *ngIf="isInvalidControl('larguraMediaEstradas')">Erro na largura média das estradas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input">
+                                <label for="custoConstrucaoEstradas">Custo de Construção de Estradas (R$/m):</label>
+                                <input type="number" id="custoConstrucaoEstradas" placeholder="Custo de construção de estradas (R$/m)" formControlName="custoConstrucaoEstradas" required/>
+                                <p *ngIf="isInvalidControl('custoConstrucaoEstradas')">Erro no custo de construção de estradas</p>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="custoManutencaoEstradas">Custo de Manutenção de Estradas (R$/m):</label>
+                                <input type="number" id="custoManutencaoEstradas" placeholder="Custo de manutenção de estradas (R$/m)" formControlName="custoManutencaoEstradas" required/>
+                                <p *ngIf="isInvalidControl('custoManutencaoEstradas')">Erro no custo de manutenção de estradas</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="buttons">
+                        <button class="sendButton" type="submit">Enviar</button>
+                        <button class="delete" type="button" (click)="delete()">Excluir</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </section>
+</div>

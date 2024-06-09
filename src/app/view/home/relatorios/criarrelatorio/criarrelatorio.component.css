@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: clamp(18px, 2vw, 28px);
+  }
+
+  label{
+    font-size: clamp(10px, 2vw, 16px);
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #reports-section {
+    margin-top: 20px;
+  }
+  
+  .report-card {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .formItens {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.formTop {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.input {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: clamp(12px, 2vw, 16px);
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+p {
+    color: red;
+    font-size: clamp(10px, 2vw, 12px);
+    margin-top: 5px;
+}
+
+.sendButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: bold;
+    color: #fff;
+    background-color: #2dd55b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.sendButton:hover {
+    background-color: #27b64d;
+}
+
+#reports-section {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .container{
+    margin-left: 80px;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+  

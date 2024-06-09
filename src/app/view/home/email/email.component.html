@@ -1,0 +1,34 @@
+<div class="container">
+  <header>
+      <h1>Relate Bugs</h1>
+  </header>
+  <div class="contato wrap">
+    <div class="formContact">
+        <div class="onlyForm">
+            <form (ngSubmit)="submit()" [formGroup]="contactForm" #formDir="ngForm" class="formTrue">
+                <div class="form-group">
+                    <label for="name">nome*</label>
+                    <input type="text" placeholder="Nome" id="nome" class="item" formControlName="nome" required maxlength="50">
+                    <p class="error" *ngIf="isInvalidControl('nome')">Erro no nome</p>
+                </div>
+                <div class="form-group">
+                    <label for="email">e-mail*</label>
+                    <input type="text" placeholder="email@email.com" id="email" class="item" formControlName="email" required>
+                    <p class="error" *ngIf="isInvalidControl('email')">Erro no e-mail</p>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">titulo/motivo*</label>
+                    <input type="text" placeholder="Titulo da mensagem" id="titulo" class="item" formControlName="titulo" required maxlength="50">
+                    <p class="error" *ngIf="isInvalidControl('titulo')">Erro no titulo</p>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">mensagem*</label>
+                    <textarea type="text" id="mensagem" class="item" formControlName="mensagem" required rows="10" cols="30"></textarea>
+                    <p class="error" *ngIf="isInvalidControl('mensagem')">Erro na mensagem</p>
+                </div>
+                <button class="sendButton" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

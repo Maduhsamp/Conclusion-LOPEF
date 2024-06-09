@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<title>LOPEF</title>
+</head>
+<body> 
+  <nav class="sidebar" [ngStyle]="{'z-index': isLogin() ? '-5' : '0'}">
+    <div class="logo-menu">
+      <h2 class="logo">LOPEF</h2>
+    <i class='bx bx-menu toggle-btn'></i>
+  </div>
+      <ul class="list">
+        <div class="allitens">
+          <li id="dashboard" class="list-item">
+            <a href="dashboard">
+              <i class='bx bx-grid-alt'></i>
+            <span class="link-name" style="--i:1;">Dashboard</span>
+          </a>
+        </li>
+      <li id="relatorios" class="list-item">
+        <a href="relatorios">
+          <i class='bx bx-folder'></i>
+        <span class="link-name" style="--i:2;">Relatórios</span>
+      </a>
+    </li>
+    <li id="configuracoes" class="list-item" (click)="toggleEmail()">
+      <a *ngIf="showEmail">
+        <i class="bx bx-support"></i>
+      <span class="link-name" style="--i:3;">Suporte</span>
+    <i class="link-name  bx bx-chevron-up" style="--i:4"></i>
+    </a>
+    <a *ngIf="!showEmail">
+      <i class="bx bx-support"></i>
+    <span class="link-name" style="--i:3;">Suporte</span>
+    <i class="link-name bx bx-chevron-down" style="--i:4"></i>
+    </a>
+    </li>
+
+    <li *ngIf="showEmail" class="list-item slide-down">
+      <a href="bugs">
+        <i class='bx bx-error'></i>
+      <span class="link-name" style="--i:4;">Relate Bugs</span>
+    </a>
+  </li>
+  </div>
+
+        <div class="logout">
+          <li class="list-item">
+            <a (click)="deslogar()">
+              <i class='bx bx-log-out log-out-btn'></i>
+            <span class="link-name" style="--i:4;">Sair</span>
+          </a>
+        </li>
+      </div>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div class="container">
+  <header>
+    <div class="search-container">
+      <h1>Relatórios</h1>
+    </div>
+    <button (click)="addReport()">Adicionar Novo Relatório</button>
+  </header>
+  <div class="search-container2">
+    <img src="assets/search.png" alt="Search">
+    <input type="text" placeholder="Pesquisar.." (input)="search($event)">
+  </div>
+
+  <section id="reports-section">
+    <div *ngFor="let relatorio of relatoriosToShow; let i = index" class="report-card">
+      <div class="reports-title">
+        {{ relatorio.titulo }}
+      </div>
+      <div class="reports-buttons">
+        <div class="button" (click)="editar(relatorio)">
+          <img src="assets/edit.png" alt="Edit Icon">
+        </div>
+        <div class="button" (click)="gerarPDF(relatorio)">
+          <img src="assets/pdf.png" alt="Pdf Icon">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
